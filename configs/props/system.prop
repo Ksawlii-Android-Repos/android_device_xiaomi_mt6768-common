@@ -42,6 +42,7 @@ debug.hwui.trace_gpu_resources=false
 config.svi.xml=1
 config.svi.xml.print=1
 persist.sys.brightness.low.gamma=true
+debug.sf.frame_rate_multiple_threshold=60
 
 # FM Radio
 persist.sys.radio.force_lte_ca=true

@@ -750,7 +750,6 @@ vendor/etc/init/init.volte_ua.rc
 vendor/etc/init/init.wfca.rc
 vendor/etc/init/init.wod.rc
 vendor/etc/init/mtk_pkm_service.rc
-vendor/etc/init/muxreport.rc
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/libasn1c_core.so
 vendor/lib/libasn1c_mapi.so

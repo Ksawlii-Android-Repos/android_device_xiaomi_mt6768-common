@@ -306,7 +306,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.xiaomi-libperfmgr
+    android.hardware.power-service.mediatek-libperfmgr
 
 PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
@@ -409,7 +409,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/xiaomi \
     hardware/mediatek/libmtkperf_client \
-    device/xiaomi/mt6768-common/power-libperfmgr \
     vendor/fingerprint/opensource/interfaces \
     $(COMMON_PATH)
 

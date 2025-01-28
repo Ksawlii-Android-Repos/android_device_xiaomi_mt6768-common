@@ -1,0 +1,24 @@
+LOCAL_PATH := $(COMMON_PATH)/libutils
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libutils-v32
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_OWNER := vendor
+LOCAL_SRC_FILES_32 := v32/arm/libutils-v32.so
+LOCAL_SRC_FILES_64 := v32/arm64/libutils-v32.so
+LOCAL_MULTILIB := both
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_STRIP_MODULE := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libutils-v33
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_OWNER := vendor
+LOCAL_SRC_FILES_32 := v33/arm/libutils-v33.so
+LOCAL_SRC_FILES_64 := v33/arm64/libutils-v33.so
+LOCAL_MULTILIB := both
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_STRIP_MODULE := false
+include $(BUILD_PREBUILT)
+

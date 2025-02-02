@@ -6,9 +6,9 @@
 
 soong_namespace {
     imports: [
-        "hardware/xiaomi"
-        "hardware/mediatek"
-        "hardware/google/pixel"
+        "hardware/xiaomi",
+        "hardware/mediatek",
+        "hardware/google/pixel",
     ]
 }
 cc_library_shared {

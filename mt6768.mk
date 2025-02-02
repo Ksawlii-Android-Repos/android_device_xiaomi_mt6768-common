@@ -38,7 +38,6 @@ PRODUCT_PACKAGES += \
     libldacBT_bco
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \

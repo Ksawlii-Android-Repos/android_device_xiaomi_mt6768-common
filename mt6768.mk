@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2025 The PixelOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -25,6 +25,9 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl
+
+# AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2025 The PixelOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -26,6 +26,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl
 
+# AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
@@ -38,7 +41,6 @@ PRODUCT_PACKAGES += \
     libldacBT_bco
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
@@ -156,10 +158,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_RECOVERY_TS_FW_PATH)/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin \
     $(COMMON_RECOVERY_TS_FW_PATH)/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin \
     $(COMMON_RECOVERY_TS_FW_PATH)/focaltech_ts_fw_xinli.bin:recovery/root/vendor/firmware/focaltech_ts_fw_xinli.bin
-
-# FM Radio
-PRODUCT_PACKAGES += \
-    FMRadio
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -306,7 +304,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.lineage-libperfmgr
+    android.hardware.power-service.pixel-libperfmgr
 
 PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \

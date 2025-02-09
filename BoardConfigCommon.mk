@@ -113,7 +113,6 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6768
-BOARD_HAVE_MTK_FM := true
 
 # Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/props/system.prop

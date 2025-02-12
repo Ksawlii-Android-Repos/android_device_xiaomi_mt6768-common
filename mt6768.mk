@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2025 The PixelOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -26,6 +26,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl
 
+# AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
@@ -38,7 +41,6 @@ PRODUCT_PACKAGES += \
     libldacBT_bco
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
@@ -252,7 +254,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.xiaomi
+    android.hardware.light-service.mt6768
 
 # Lineage Health
 ifneq ($(wildcard hardware/*/interfaces/health),)

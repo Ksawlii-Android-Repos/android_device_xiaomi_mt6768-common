@@ -37,6 +37,7 @@ config.svi.path=/system/etc/SVIConfig.xml
 debug.svi.logs=1
 debug.als.logs=1
 debug.sf.enable_hwc_vds=0
+debug.sf.auto_latch_unsignaled=0
 debug.hwui.trace_gpu_resources=false
 config.svi.xml=1
 config.svi.xml.print=1

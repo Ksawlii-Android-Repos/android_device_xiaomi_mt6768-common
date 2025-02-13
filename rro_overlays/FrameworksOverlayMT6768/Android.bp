@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "FrameworksOverlayMT6768",
+    theme: "FrameworksOverlayMT6768",
+    sdk_version: "current",
+    vendor: true,
+}

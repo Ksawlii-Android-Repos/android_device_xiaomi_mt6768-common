@@ -66,6 +66,7 @@ ro.iorapd.enable=false
 
 # Logging
 persist.sys.mdlog_dumpback=2
+persist.log.tag.gralloc4=S
 
 # MIUI
 persist.miui.extm.enable=1

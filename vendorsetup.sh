@@ -24,3 +24,18 @@ if [ ! -f "packages/apps/FMRadio/.fixed-fmr" ]; then
   echo "Fixed FMRadio"
   cd ../../../
 fi
+
+# if libfmjni is undefined
+if [ -f "out/error.log" ]; then
+  if grep -r -w "libfmjni" out/error.log; then
+    cd vendor/xiaomi/mt6768-common
+    if [ -f .git/shallow ]; then
+      git pull --unshallow
+      git revert --no-edit 0f711e758c005a41fcc396ba14ad89b557fb402b
+    else
+      git revert --no-edit 0f711e758c005a41fcc396ba14ad89b557fb402b 
+    fi
+    rm -rf "out/error.log"
+    cd ../../../
+  fi
+fi

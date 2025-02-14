@@ -21,6 +21,11 @@
   <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
   <integer name="config_screenRecorderMaxFramerate">45</integer>
 
+  <string-array name="configs_base">
+      <!-- ART heap compaction for cached apps -->
+      <item>activity_manager/use_compaction=true</item>
+  </string-array>
+
   <!-- The list of components which should be automatically disabled for a specific device. -->
   <string-array name="config_deviceDisabledComponents" translatable="false">
       <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicNotificationsSettingsActivity</item>

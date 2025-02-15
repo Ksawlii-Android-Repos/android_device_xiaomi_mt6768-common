@@ -44,3 +44,8 @@ fi
 if [ -d "hardware/google/pixel/kernel_headers/" ]; then
   rm -rf "hardware/google/pixel/kernel_headers/"
 fi
+
+# Remove PowerOffAlarm
+if [ -d "hardware/mediatek/PowerOffAlarm/" ]; then
+  rm -rf "hardware/mediatek/PowerOffAlarm/"
+fi

@@ -111,9 +111,6 @@ ro.vendor.mtk_log_hide_gps=0
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
-# LMK
-ro.lmk.kill_heaviest_task=true
-
 # IMS
 ro.vendor.md_auto_setup_ims=1
 persist.vendor.ims_support=1
@@ -124,9 +121,6 @@ persist.vendor.volte_support=1
 persist.vendor.mtk.volte.enable=1
 persist.vendor.vilte_support=0
 persist.vendor.viwifi_support=0
-
-# LMK 
-ro.lmk.log_stats=false
 
 # MIUI
 sys.fp.miui.token=0
@@ -139,11 +133,6 @@ persist.sys.mms.bg_apps_limit=96
 persist.sys.mmms.lowmem.wmark.boost.factor=3
 persist.sys.miui.adj_update_foreground_state.enable.delayMs=3000
 persist.sys.miui.camera.lmkd.level.update=2
-
-# LMK tuning
-ro.lmk.filecache_min_kb=153600
-ro.lmk.kill_timeout_ms=50
-ro.lmk.stall_limit_critical=40
 
 # Media
 ro.vendor.mtk_config_max_dram_size=0x800000000

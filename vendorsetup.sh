@@ -39,3 +39,8 @@ if [ -f "out/error.log" ]; then
     cd ../../../
   fi
 fi
+
+# Remove kernel headers conflicts
+if [ -d "hardware/google/pixel/kernel_headers/" ]; then
+  rm -rf "hardware/google/pixel/kernel_headers/"
+fi

@@ -49,3 +49,8 @@ fi
 if [ -d "hardware/mediatek/PowerOffAlarm/" ]; then
   rm -rf "hardware/mediatek/PowerOffAlarm/"
 fi
+
+# Remove vendor/qcom/common
+if [ -d "vendor/qcom/common/" ]; then
+  rm -rf "vendor/qcom/common/"
+fi

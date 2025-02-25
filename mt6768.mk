@@ -454,9 +454,5 @@ PRODUCT_COPY_FILES += \
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
-# Use FUSE passthrough
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.sys.fuse.passthrough.enable=true
-
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/mt6768-common/mt6768-common-vendor.mk)

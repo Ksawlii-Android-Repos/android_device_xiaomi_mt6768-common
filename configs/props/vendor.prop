@@ -94,6 +94,10 @@ ro.vendor.cabc.enable=true
 debug.sf.auto_latch_unsignaled=0
 persist.vendor.sys.mtkaal.function=0
 
+# Dolby Atmos
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
+
 # FM Radio
 ro.vendor.builtin_fm_antenna_support=1
 persist.vendor.connsys.fm_chipid=mt6631

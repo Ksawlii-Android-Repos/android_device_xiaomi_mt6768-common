@@ -11,8 +11,6 @@ audio_para_version=J15S-Audiopara-V20-20200527
 
 # Blur
 ro.launcher.blur.appLaunch=0
-ro.sf.blurs_are_expensive=0
-ro.surface_flinger.supports_background_blur=0
 
 # Brand
 Build.BRAND=MTK

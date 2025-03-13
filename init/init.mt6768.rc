@@ -10,11 +10,18 @@ import /vendor/etc/init/hw/init.modem.rc
 # *** DO NOT import the new rc file after this line ***
 
 on early-init
+    # Start audio adsp rpc daemon at early init stage
+    start vendor.audioadsprpcd_audiopd
+
+on early-init
     write /proc/bootprof "INIT:early-init"
     # boot perf. tune
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0
     chmod 0666 /sys/module/usb20_host/parameters/vbus_force_on
+
+on early-init
+    write /sys/module/drm/parameters/vblankoffdelay -1
 
 on init
     write /proc/bootprof "INIT:init"
@@ -37,7 +44,7 @@ on init
 
 # update cpus for cpuset cgroup
     write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/background/cpus 0-2
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/top-app/cpus 0-7
 

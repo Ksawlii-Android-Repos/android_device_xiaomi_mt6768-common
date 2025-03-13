@@ -55,6 +55,7 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+BOARD_RAMDISK_USE_LZ4 := true
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
@@ -91,8 +92,7 @@ BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_PARTITION_LIST := system system_ext vendor product
 
 # Reserve space for gapps install
-WITH_GMS := true
-ifneq ($(WITH_GMS),true)
+ifneq ($(RESERVE_SPACE_FOR_GAPPS),true)
 BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 614400000
 BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
@@ -113,9 +113,9 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6768
-BOARD_HAVE_MTK_FM := true
 
 # Properties
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/configs/props/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/props/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/props/vendor.prop
 
@@ -178,8 +178,9 @@ TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE += $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
-$(COMMON_PATH)/configs/vintf/framework_compatibility_matrix.xml
+		hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
+		$(COMMON_PATH)/configs/vintf/framework_compatibility_matrix.xml \
+    $(COMMON_PATH)/vintf/device_framework_compatibility_matrix.xml
 
 # Wi-Fi
 WPA_SUPPLICANT_VERSION := VER_0_8_X

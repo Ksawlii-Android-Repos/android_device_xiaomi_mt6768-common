@@ -9,6 +9,11 @@ debug.cpurend.vsync=false
 ro.audio.silent=0
 audio_para_version=J15S-Audiopara-V20-20200527
 
+# Blur
+ro.launcher.blur.appLaunch=0
+ro.sf.blurs_are_expensive=0
+ro.surface_flinger.supports_background_blur=0
+
 # Brand
 Build.BRAND=MTK
 
@@ -33,9 +38,13 @@ dalvik.vm.image-dex2oat-threads=4
 config.svi.path=/system/etc/SVIConfig.xml
 debug.svi.logs=1
 debug.als.logs=1
+debug.sf.enable_hwc_vds=0
+debug.sf.auto_latch_unsignaled=0
+debug.hwui.trace_gpu_resources=false
 config.svi.xml=1
 config.svi.xml.print=1
 persist.sys.brightness.low.gamma=true
+debug.sf.frame_rate_multiple_threshold=60
 
 # FM Radio
 persist.sys.radio.force_lte_ca=true
@@ -60,6 +69,7 @@ ro.iorapd.enable=false
 
 # Logging
 persist.sys.mdlog_dumpback=2
+persist.log.tag.gralloc4=S
 
 # MIUI
 persist.miui.extm.enable=1

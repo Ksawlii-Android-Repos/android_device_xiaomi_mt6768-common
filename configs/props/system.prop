@@ -27,6 +27,13 @@ vendor.camera.aux.packagelist=org.lineageos.aperture,org.lineageos.aperture.dev
 # Charger
 ro.charger.enable_suspend=true
 
+# Crok's RAM Managment Fix
+ro.sys.fw.bg_apps_limit=128
+ro.vendor.qti.sys.fw.bg_apps_limit=128
+ro.vendor.qti.sys.fw.bservice_enable=true
+ro.vendor.qti.sys.fw.bservice_age=10000
+ro.vendor.qti.sys.fw.bservice_limit=128
+
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.dex2oat-cpu-set=4,5,6,7

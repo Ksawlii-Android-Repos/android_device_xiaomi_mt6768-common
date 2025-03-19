@@ -1225,3 +1225,14 @@ on property:sys.boot_completed=1
 # Restart C2 service
 on property:sys.boot_completed=1
     restart android-hardware-media-c2-hal-1-2
+
+# Crok's RAM Managment Fix
+on property:ro.build.version.release=10
+    exec u:r:system_server:s0 -- /system/bin/cmd device_config set_sync_disabled_for_tests persistent
+    exec u:r:system_server:s0 -- /system/bin/cmd device_config put activity_manager max_cached_processes 256
+    exec u:r:system_server:s0 -- /system/bin/cmd device_config put activity_manager max_phantom_processes 2147483647
+    exec u:r:system_server:s0 -- /system/bin/cmd settings put global settings_enable_monitor_phantom_procs false
+    exec u:r:system_server:s0 -- /system/bin/cmd device_config put activity_manager max_empty_time_millis 43200000
+
+on property:ro.build.version.release=9
+    exec u:r:system_server:s0 -- /system/bin/settings put global activity_manager_constants max_cached_processes=256

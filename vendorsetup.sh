@@ -10,6 +10,7 @@ fi
 if [ -d "packages/apps/FMRadio" ]; then
   rm -rf "packages/apps/FMRadio"
 fi
+find . -type f -name ".repo/manifests/*.xml" -exec sed -i '/<project path="packages\/apps\/FMRadio" name="LineageOS\/android_packages_apps_FMRadio" \/>/d' {} +
 
 # Dolby
 if [ ! -d "hardware/xiaomi/dolby" ]; then
